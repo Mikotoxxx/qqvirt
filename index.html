@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>QQvirt WebApp</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QQvirt WebApp</title>
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: #0d0d0d;
-        color: #fff;
-        font-family: Arial, sans-serif;
-    }
-    .container {
-        padding: 20px;
-        text-align: center;
-    }
-    h1 {
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
-    p {
-        color: #cfcfcf;
-        font-size: 16px;
-    }
+    <!-- Telegram WebApp SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-    .btn {
-        margin-top: 25px;
-        padding: 15px 20px;
-        width: 90%;
-        max-width: 330px;
-        background: #202020;
-        color: #fff;
-        border-radius: 10px;
-        border: 1px solid #333;
-        cursor: pointer;
-        font-size: 18px;
-    }
-</style>
+    <style>
+        body {
+            background: #0d1117;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
 
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #21262d;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+            border: 1px solid #30363d;
+        }
+
+        .btn:hover {
+            background: #30363d;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>QQvirt WebApp</h1>
-    <p>Пример первой страницы, которая откроется в Telegram через WebApp.</p>
+<h1>QQvirt — меню</h1>
 
-    <button class="btn">Это кнопка внутри WebApp</button>
-</div>
+<a class="btn" href="#">Каталог</a>
+<a class="btn" href="#">Личный кабинет</a>
+<a class="btn" href="#">FAQ</a>
+<a class="btn" href="#">Помощь</a>
+
+<script>
+    // Инициализация WebApp
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+</script>
 
 </body>
 </html>
